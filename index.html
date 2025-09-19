@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LEIMARK REYES — Portfolio</title>
+  <meta name="description" content="Portfolio of Leimark Reyes — developer, student, and creator." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1320; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px; --radius:14px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071124 0%, #071a2a 100%);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    nav{display:flex;gap:12px;align-items:center}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .avatar{width:58px;height:58px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{font-size:28px;margin:0}
+    .lead{color:var(--muted);margin-top:6px}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    @media (max-width:900px){main{grid-template-columns:1fr}header{flex-direction:column;align-items:flex-start}.wrap{padding:16px}}
+
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .hero{display:flex;gap:18px;align-items:center}
+    .hero .photo{width:5in;height:2in;border-radius:16px;overflow:hidden;background:var(--glass);display:flex;align-items:center;justify-content:center;font-size:20px}
+    .hero .photo img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+    .badges{display:flex;gap:8px;margin-top:12px}
+    .badge{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    section{margin-bottom:18px}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (max-width:700px){.projects-grid{grid-template-columns:1fr}}
+    .project{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+    .project h4{margin:0 0 6px 0}
+
+    /* === Skills with progress bars === */
+    .skill-item {margin-bottom: 14px;}
+    .skill-item span {font-size: 14px;color: #e6eef6;display: block;margin-bottom: 6px;}
+    .progress {background: rgba(255,255,255,0.08);border-radius: 8px;overflow: hidden;height: 20px;}
+    .progress div {height: 100%;background: linear-gradient(90deg,var(--accent),#7c3aed);color: #051122;
+      font-size: 12px;font-weight: bold;text-align: right;padding-right: 6px;line-height: 20px;
+      border-radius: 8px 0 0 8px;transition: width 1.2s ease;}
+
+    aside .contact-info p{margin:8px 0;color:var(--muted)}
+    .socials{display:flex;gap:8px;margin-top:8px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#051122;font-weight:700}
+
+    footer{text-align:center;color:var(--muted);margin-top:24px;font-size:13px}
+
+    form{display:flex;flex-direction:column;gap:8px}
+    input,textarea{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:100px;resize:vertical}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="avatar">LR</div>
+        <div>
+          <div style="display:flex;gap:6px;align-items:baseline"><h1>Leimark Reyes</h1></div>
+          <div class="lead">Student • Web developer • Problem-solver</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <section class="card hero" id="about">
+          <div class="photo">
+            <img src="lei.jpeg" alt="Photo of Leimark Reyes">
+          </div>
+          <div>
+            <h2 style="margin:0">Hi — I'm Leimark</h2>
+            <p class="lead">I create small, focused web apps and school projects. I enjoy learning new tech, solving problems, and building clean, simple user interfaces.</p>
+            <div class="badges">
+              <span class="badge">HUMSS Strand</span>
+              <span class="badge">HTML • CSS • JavaScript</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="projects">
+          <div class="section-title"><h3 style="margin:0">Projects</h3><small class="lead">Selected work</small></div>
+          <div class="projects-grid">
+            <article class="project">
+              <h4>Portfolio Mini-site</h4>
+              <p class="lead">Personal portfolio built with HTML/CSS — responsive and simple. Features Home, About, Projects pages.</p>
+              <p style="margin-top:8px"><a href="#">View code</a></p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="card" id="skills">
+          <div class="section-title"><h3 style="margin:0">Skills</h3><small class="lead">Tools & technologies</small></div>
+          <div class="skills">
+            <div class="skill-item"><span>HTML</span><div class="progress"><div style="width:90%">90%</div></div></div>
+            <div class="skill-item"><span>CSS</span><div class="progress"><div style="width:85%">85%</div></div></div>
+            <div class="skill-item"><span>JavaScript</span><div class="progress"><div style="width:70%">70%</div></div></div>
+            <div class="skill-item"><span>PHP</span><div class="progress"><div style="width:65%">65%</div></div></div>
+            <div class="skill-item"><span>Responsive design</span><div class="progress"><div style="width:80%">80%</div></div></div>
+          </div>
+        </section>
+
+        <!-- Updated Work Experience Section -->
+        <section class="card" id="experience">
+          <h3 style="margin:0">Work Experience</h3>
+          <p class="lead" style="margin-top:8px">
+            I have collaborated on academic projects in the HUMSS strand, including digital portfolios and presentations. 
+            My focus has been on teamwork, creativity, and applying technology to enhance learning and communication.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3 style="margin:0">Education & Interests</h3>
+          <p class="lead" style="margin-top:8px">Currently studying in the Humanities and Social Sciences (HUMSS) strand. 
+          Interests include writing, public speaking, technology, and community engagement.</p>
+        </section>
+      </div>
+
+      <aside style="position:relative">
+        <div class="card contact-info">
+          <div class="section-title"><h3 style="margin:0">Contact</h3><small class="lead">Get in touch</small></div>
+          <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+          <p>Location: Bangued, Abra (Philippines)</p>
+          <div class="socials">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Made with care • Leimark Reyes • © <span id="year"></span></p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
